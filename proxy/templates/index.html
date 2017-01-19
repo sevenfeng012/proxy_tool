@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+//        var WEBSOCKET_URL = 'ws://localhost:9000/websocket';
+        var WEBSOCKET_URL = {{ url }};
+    </script>
+    <script src="../static/js/uuid.js"></script>
+    <script src="../static/js/bagou.js"></script>
+
+    <script src="../static/js/favico-0.3.3.min.js"></script>
+    <script src="../static/js/chat.js"></script>
+    <link rel="stylesheet" href="../static/css/chat.css" type="text/css">
+    <title>proxy - request -log</title>
+    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <script type="text/javascript">
+      isReady(function() {
+        loadChat();
+      });
+    </script>
+</head>
+<body>
+    <div class="home">
+       <div class="signbox">
+           <h1>realtime Proxy_request log</h1>
+           <hr>
+           <div class="connect">
+             <input id="username" type="text" placeholder="Choose your queue name" hidden/>
+             <input id="room" type="text" placeholder="Choose a queue name" value="Proxy_Request" autofocus/>
+             <button id="join">watch now !</button>
+            </div>
+       </div>
+    </div>
+    <div class="room" style="display: none;">
+        <div id="header">
+            <h1 class="room-name"></h1>
+            <div class="infos">
+                <div class="status"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="alerts"></div>
+        <div class="input">
+            <input id="field" type="text" placeholder="Type your message here" autofocus />
+            <div class="actions">
+                <button id="submit">Submit</button>
+                <button id="disconnect">Disconnect</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
